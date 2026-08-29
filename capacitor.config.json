@@ -1,0 +1,11 @@
+{
+  "appId": "com.finans.kasadefteri",
+  "appName": "Finans & Kasa Defteri",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "backgroundColor": "#0b0b12",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  }
+}

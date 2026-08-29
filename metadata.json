@@ -1,0 +1,8 @@
+{
+  "name": "Finans & Kasa Defteri - Mobil Finans Takip",
+  "description": "Devirli kasa defteri, banka temalı kredi kartları, kredi borç düşümü, faturalar, alarm hatırlatıcıları ve Android APK oluşturma desteği.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

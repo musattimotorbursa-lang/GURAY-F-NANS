@@ -24,21 +24,22 @@ jobs:
         java-version: '17'
 
     - name: Install Dependencies
-      run: npm install
+      run: |
+        npm install
+        npm install -g @capacitor/cli
+        npm install @capacitor/core @capacitor/android
 
     - name: Build Web App
       run: npm run build
 
-    - name: Add Android Platform
+    - name: Initialize & Sync Capacitor
       run: |
-        npm install @capacitor/android
+        npx cap init "My App" "com.example.app" --web-dir dist || true
         npx cap add android || true
+        npx cap copy android
         npx cap sync android
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-
-    - name: Build APK
+    - name: Build APK with Gradle
       run: |
         cd android
         chmod +x gradlew
